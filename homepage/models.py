@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.urls import reverse
-from pillow import Image
+import Image
 from notifications.signals import notify
 from django.utils.text import Truncator
 
