@@ -3,12 +3,12 @@ from .models import Post, PostImage, Comment, Like
 
 
 class PostImageInLine(admin.TabularInline):
-    model = PostImage
-    extra = 4
+  model = PostImage
+  extra = 4
 
 
 class PostAdmin(admin.ModelAdmin):
-    inlines = [PostImageInLine]
+  inlines = [PostImageInLine]
 
 
 admin.site.register(Post, PostAdmin)

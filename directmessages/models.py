@@ -14,12 +14,12 @@ class Message(models.Model):
     def get_absolute_url(self):
         return reverse('caseygram-home')
 
-    def save(self, *args, **kwargs):
-        super(Message, self).save(*args, **kwargs)
-        notify.send(self.sender, recipient=self.receiver, verb='sent you a ', description='message', target=self)
+        def save(self, *args, **kwargs):
+            super(Message, self).save(*args, **kwargs)
+            notify.send(self.sender, recipient=self.receiver, verb='sent you a ', description='message', target=self)
 
-    class Meta:
-        ordering = ['-date_created']
+            class Meta:
+                ordering = ['-date_created']
 
-    def __str__(self):
-        return self.content
+                def __str__(self):
+                    return self.content

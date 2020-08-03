@@ -16,13 +16,13 @@ button.post {
 }
 
 #cur-brand {
-    font-family: 'Kaushan Script', cursive;
-    color: black;
-    font-size: 25px;
+  font-family: 'Kaushan Script', cursive;
+  color: black;
+  font-size: 25px;
 }
 #bar-brand {
-    color: black;
-    font-size:25px;
+  color: black;
+  font-size:25px;
 }
 
 #author-link {
@@ -60,26 +60,26 @@ button.post {
 }
 
 #explore-text{
-    color:#A99999;
-    font-size: 12px;
-    padding-left: 14px;
+  color:#A99999;
+  font-size: 12px;
+  padding-left: 14px;
 }
 
 #search-bar{
-    height: 28px;
-    width: 215px;
-    background-color: #FAFAFA;
+  height: 28px;
+  width: 215px;
+  background-color: #FAFAFA;
 }
 
 #explore-layout{
-    margin-left: : 0;
-    margin-right: 0;
+  margin-left: : 0;
+  margin-right: 0;
 }
 
 
 
 body{
-    background-color: #FAFAFA;
+  background-color: #FAFAFA;
 }
 
 
@@ -95,8 +95,8 @@ nav {
 }
 
 .col-centered{
-    float: none;
-    margin: 0 auto;
+  float: none;
+  margin: 0 auto;
 }
 
 .feed {
@@ -104,22 +104,22 @@ nav {
 }
 
 .fit-image{
-width: 100%;
-object-fit: cover;
+  width: 100%;
+  object-fit: cover;
 }
 
 @media (min-width: 1200px) {
-    #navbar{
-        max-width: 1010px;
-    }
+  #navbar{
+    max-width: 1010px;
+  }
 }
 
- small {
-    color: #999999;
- }
+small {
+  color: #999999;
+}
 
 ul li a{
-    color: #55CB93;
+  color: #55CB93;
 }
 
 .post-buttons{
@@ -127,15 +127,15 @@ ul li a{
 }
 
 .input-mysize {
-    width: 215px;
+  width: 215px;
 }
 
 .navbar-custom{
-    background-color: #FFFFFF
+  background-color: #FFFFFF
 }
 
 #postdivider {
-    border-bottom: 1px solid #E6E6E6;
+  border-bottom: 1px solid #E6E6E6;
 }
 
 div b{
@@ -153,15 +153,15 @@ small {
 }
 
 #post{
-    border-left:1px solid #E6E6E6;
-    border-right: 1px solid #E6E6E6;
-    border-top: 1px solid #E6E6E6;
-    background-color: #FFFFFF;
+  border-left:1px solid #E6E6E6;
+  border-right: 1px solid #E6E6E6;
+  border-top: 1px solid #E6E6E6;
+  background-color: #FFFFFF;
 }
 
 .padding-0{
-    padding-right:0;
-    padding-left:0;
+  padding-right:0;
+  padding-left:0;
 }
 
 .article-img {
@@ -230,19 +230,19 @@ small {
 }
 
 body {
-    padding-top: 65px;
-    padding-bottom: 75px;
+  padding-top: 65px;
+  padding-bottom: 75px;
 }
 
 @media (min-width: 768px){
-    .nav-footer {
-        display : none;
-        visibility : hidden;
-    }
+  .nav-footer {
+    display : none;
+    visibility : hidden;
+  }
 }
 
 .navbar-footer>li {          /* <- this affects just my footer navbar */
-    display: inline-block;
+  display: inline-block;
 }
 
 .navbar-footer{
