@@ -13,7 +13,7 @@ class MessageCreateView(LoginRequiredMixin, CreateView):
     form_class = MessageForm
 
     def get_success_url(self):  # modifys the default sucess url to return the page the submission came from
-    return self.request.path
+        return self.request.path
 
     def form_valid(self, form):
         form.instance.sender = self.request.user
