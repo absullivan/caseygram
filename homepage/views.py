@@ -209,36 +209,9 @@ def public_profile(request, username):  # learn how in bookmarks
         'followers': Follower.objects.filter(being_followed=obj).exclude(follower=obj),
         'followees': Follower.objects.filter(follower=obj).exclude(being_followed=obj),
         'followcheck': Follower.objects.filter(follower=request.user, being_followed=obj),
-        'title': 'Public-Profile',
     }
-<<<<<<< HEAD
         response = render(request, 'homepage/public_profile.html', context, {'title': 'Public-Profile'})
         return response
-
-        class SearchListView(ListView):
-            model = User
-            template_name = 'auth/user_list.html'
-
-            def get_context_data(self, **kwargs):
-                context = super().get_context_data(**kwargs)
-                query = self.request.GET.get('q')
-                context['query'] = self.request.GET.get('q')
-                context['posts'] = Post.objects.filter(caption__icontains=query)
-                return context
-
-                def get_queryset(self):
-                    query = self.request.GET.get('q')
-                    object_list = User.objects.filter(username__icontains=query)
-                    return object_list
-
-                    class LikeListView(LoginRequiredMixin, ListView):
-                        model = Like
-
-                        def get_queryset(self):
-                            # org qs
-=======
-    response = render(request, 'homepage/public_profile.html', context)
-    return response
 
 
 class SearchListView(ListView):
@@ -259,11 +232,10 @@ class SearchListView(ListView):
 
 
 class LikeListView(LoginRequiredMixin, ListView):
-    model = Like
+     model = Like
 
     def get_queryset(self):
-        # org qs
->>>>>>> db5812bb06b8be724ff56daad055eb9a53729336
+                    # org qs
         qs = super().get_queryset()
         # filter by var from captured url
         return qs.filter(post__pk=self.kwargs['pk'])
