@@ -200,7 +200,7 @@ class PostListView(LoginRequiredMixin, ListView):
 
                     return context
 
-                    @login_required
+@login_required
 def public_profile(request, username):  # learn how in bookmarks
     obj = User.objects.get(username=username)  # grabs <username> from url and stores it in obj to  be passed into the context
     context = {

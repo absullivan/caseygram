@@ -26,10 +26,11 @@ class MessageCreateView(LoginRequiredMixin, CreateView):
         # context['receiver_username'] =
         return context
 
-        class InboxListView(LoginRequiredMixin, ListView):
-            model = Message
 
-            def get_context_data(self, **kwargs):
+class InboxListView(LoginRequiredMixin, ListView):
+    model = Message
+
+    def get_context_data(self, **kwargs):
                 context = super().get_context_data(**kwargs)
                 sender_list_author = []
                 sender_qs = []
