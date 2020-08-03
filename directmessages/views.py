@@ -31,9 +31,9 @@ class InboxListView(LoginRequiredMixin, ListView):
     model = Message
 
     def get_context_data(self, **kwargs):
-                context = super().get_context_data(**kwargs)
-                sender_list_author = []
-                sender_qs = []
+        context = super().get_context_data(**kwargs)
+        sender_list_author = []
+        sender_qs = []
         qs = Message.objects.filter(receiver=self.request.user).order_by('-date_created')  # all messages send to logged in user
         for i in qs:
             if i.sender.username not in sender_list_author:
@@ -42,5 +42,5 @@ class InboxListView(LoginRequiredMixin, ListView):
                 context['sender_qs'] = sender_qs
                 return context
 
-                def get_queryset(self):
-                    return Message.objects.filter(receiver=self.request.user).order_by('-date_created')
+    def get_queryset(self):
+        return Message.objects.filter(receiver=self.request.user).order_by('-date_created')
