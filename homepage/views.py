@@ -33,16 +33,16 @@ class PostListView(LoginRequiredMixin, ListView):
         def likePost(request):
             if request.method == 'GET':
                 post_id = request.GET['post_id']
-        likedpost = Post.objects.get(pk=post_id)  # getting the liked post
+                likedpost = Post.objects.get(pk=post_id)  # getting the liked post
 
-        if Like.objects.filter(post=likedpost, liker=request.user).exists():
-            Like.objects.filter(post=likedpost, liker=request.user).delete()
-        else:
-            m = Like(post=likedpost, liker=request.user)  # creating like object
-            m.save()  # saves into database
-            return HttpResponse(likedpost.likes.count())
-        else:
-            return HttpResponse("Request method is not a GET")
+                if Like.objects.filter(post=likedpost, liker=request.user).exists():
+                    Like.objects.filter(post=likedpost, liker=request.user).delete()
+                else if:
+                    m = Like(post=likedpost, liker=request.user)  # creating like object
+                    m.save()  # saves into database
+                    return HttpResponse(likedpost.likes.count())
+                else:
+                    return HttpResponse("Request method is not a GET")
 
             def search(request):
                 form = SearchForm()
@@ -199,6 +199,7 @@ class PostListView(LoginRequiredMixin, ListView):
                     context['followlist'] = followlist
 
                     return context
+
 
 @login_required
 def public_profile(request, username):  # learn how in bookmarks
