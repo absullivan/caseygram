@@ -37,7 +37,7 @@ class PostListView(LoginRequiredMixin, ListView):
 
                 if Like.objects.filter(post=likedpost, liker=request.user).exists():
                     Like.objects.filter(post=likedpost, liker=request.user).delete()
-                else if:
+                elif:
                     m = Like(post=likedpost, liker=request.user)  # creating like object
                     m.save()  # saves into database
                     return HttpResponse(likedpost.likes.count())
